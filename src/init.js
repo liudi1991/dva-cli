@@ -22,6 +22,7 @@ function success(message) {
 function init({ demo, install }) {
   const type = demo ? 'demo' : 'app';
   const cwd = join(__dirname, '../boilerplates', type);
+  // 当前目录
   const dest = process.cwd();
   const projectName = basename(dest);
 
@@ -30,7 +31,7 @@ function init({ demo, install }) {
     process.exit(1);
   }
 
-  console.log(`Creating a new Dva app in ${dest}.`);
+  console.log(`Creating a new apollo app in ${dest}.`);
   console.log();
 
   vfs.src(['**/*', '!node_modules/**/*'], {cwd: cwd, cwdbase: true, dot: true})
@@ -91,6 +92,7 @@ export default function (...args) {
     },
   ]).then(({ insist }) => {
     if (insist) {
+      // 初始化
       init(...args);
     } else {
       console.log('Have a good day!');

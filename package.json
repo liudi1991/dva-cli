@@ -1,7 +1,7 @@
 {
-  "name": "dva-cli",
+  "name": "apollo-cli",
   "version": "0.10.1",
-  "description": "The dva command line utility.",
+  "description": "The apollo command line utility.",
   "repository": {
     "type": "git",
     "url": "https://github.com/dvajs/dva-cli"
@@ -10,10 +10,10 @@
   "mail": "chencheng <sorrycc@gmail.com>",
   "license": "MIT",
   "bin": {
-    "dva": "./bin/dva"
+    "apollo": "./bin/apollo"
   },
   "scripts": {
-    "build": "rm -rf lib && babel src --out-dir lib"
+    "build": "rm -rf lib && babel src --out-dir lib -s"
   },
   "dependencies": {
     "chalk": "^1.1.3",
